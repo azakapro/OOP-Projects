@@ -15,4 +15,7 @@ int main(){
     area=(h*b)/2;
     
       cout<<"\nArea of Scalene Triangle = "<<area<<endl;
+     
+    system("pause");
+    return 0;
 }
