@@ -15,4 +15,7 @@ int main(){
     
       cout<<"\nArea of Circle = "<<area<<endl;
       cout<<"Circumference of Circle = "<<circum<<endl;
+     
+    system("pause");
+    return 0;
 }
