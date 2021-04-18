@@ -13,4 +13,7 @@ int main(){
     area=(sqrt(3)/4)*a*a;
     
       cout<<"\nArea of Equilateral Triangle = "<<area<<endl;
+    
+    system"pause";
+    return 0;
 }
