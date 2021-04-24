@@ -14,6 +14,6 @@ int main(){
     
       cout<<"\nArea of Equilateral Triangle = "<<area<<endl;
     
-    system"pause";
+    system("pause");
     return 0;
 }
