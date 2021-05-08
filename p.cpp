@@ -26,33 +26,37 @@ public:
 	}
 	void setdep()
 	{
-		textflow("Please set the yearly deposit percentage", 20);
-		cout << endl;
+		textflow("\n\t\t\t Please set the yearly deposit percentage : ", 20);
+		
 		cin >> depositp;
-		textflow("Deposit Percentage set to: ", 20);
+		textflow("\n\t\t\t Deposit Percentage set to: ", 20);
 		cout << depositp;
 		textflow("% successfully", 20);
 		cout << endl;
+		Sleep(1200);
+		system("cls");
 	}
 	void setwith()
 	{
-		textflow("Please set the yearly withdrawal percentage", 20);
-		cout << endl;
+		textflow("\n\t\t\t Please set the yearly withdrawal percentage : ", 20);
 		cin >> withdrawalp;
-		textflow("Withdrawal Percentage set to: ", 20);
+		textflow("\n\t\t\t Withdrawal Percentage set to: ", 20);
 		cout << withdrawalp;
 		textflow("% successfully", 20);
 		cout << endl;
+		Sleep(1200);
+		system("cls");
 	}
 	void setdollarc()
 	{
-		textflow("Enter the current dollar course ($1 in Sums)", 20);
-		cout << endl;
+		textflow("\n\t\t\tEnter the current dollar course ($1 in Sums) : ", 20);
 		cin >> dollarc;
-		textflow("Dollar course set to: ", 20);
+		textflow("\n\t\t\tDollar course set to: ", 20);
 		cout << dollarc;
 		textflow(" successfully", 20);
 		cout << endl;
+		Sleep(1200);
+		system("cls");
 	}
 	double getdep()
 	{
@@ -67,6 +71,7 @@ public:
 		return dollarc;
 	}
 };
+
 class StaffID
 {
 private:
@@ -87,6 +92,7 @@ public:
 		return PW;
 	}
 };
+
 class CustomerID
 {
 private:
@@ -111,13 +117,15 @@ public:
 		return PW;
 	}
 };
+
 void currencyexchange()
 {
 	Courses crs;
-	textflow("[1] Dollar to Sums", 20);
+	textflow("\n\t\t\t1. Dollar to Sums", 20);
 	cout << endl;
-	textflow("[2] Sums to Dollar", 20);
+	textflow("\n\t\t\t2. Sums to Dollar", 20);
 	cout << endl;
+	textflow("\n\n\t\t\t# Your option : ", 20);
 	int k;
 	double finalsum, money;
 	cin >> k;
@@ -125,30 +133,43 @@ void currencyexchange()
 	{
 	case 1:
 	{
-		textflow("How much money you want to convert?", 20);
-		cout << endl;
+		system("cls");
+		cout << ("\n        O N L I N E   B A N K                                    D O L L A R   TO   S U M       \n");
+		cout << "____________________________________________________________________________________________________\n\n";
+
+		textflow("\n\t\t\tHow much money you want to convert? : ", 20);
 		cin >> money;
 		finalsum = money * crs.getdollarc();
-		textflow("Your money in Sums will be: $", 20);
+		textflow("\n\t\t\tYour money in Sums will be: $", 20);
 		cout << finalsum << endl;
+		Sleep(2000);
+		system("cls");
 		break;
+		
+		
 	}
 	case 2:
 	{
-		textflow("How much money you want to convert?", 20);
-		cout << endl;
+		system("cls");
+		cout << ("\n        O N L I N E   B A N K                                  S U M   T O   D O L L A R            \n");
+		cout << "____________________________________________________________________________________________________\n\n";
+		textflow("\n\t\t\tHow much money you want to convert? : ", 20);
 		cin >> money;
 		finalsum = money / crs.getdollarc();
 		textflow("Your money in Dollar will be: ", 20);
 		cout << finalsum;
 		textflow(" Sums", 20);
-		cout<< endl;
+		cout << endl;
+		Sleep(2000);
+		system("cls");
 		break;
+		
+		
 	}
 	default:
 	{
 		system("Color 0C");
-		textflow("Please choose available option", 20);
+		textflow("\n\t\t\tPlease choose available option!", 20);
 		cout << endl;
 		system("Color 0A");
 		Sleep(1200);
@@ -159,35 +180,41 @@ void currencyexchange()
 }
 void staffent()
 {
-	textflow("Staff entered the system successfully", 20);
+	
+	system("cls");
+	cout << ("\n        O N L I N E   B A N K                                             S T A F F   M E N U       \n");
+	cout << "____________________________________________________________________________________________________\n\n";
+	textflow("\n\t\t  | | | | | Please choose one of the following options! | | | | |\n", 15);
 	cout << endl;
-	textflow("Please choose one of the following options!", 15);
+	textflow("\n\t\t\t 1. To set Yearly Deposit Interest Percentage", 15);
 	cout << endl;
-	textflow("[1] To set Yearly Deposit Interest Percentage", 15);
+	textflow("\n\t\t\t 2. To set Yearly Withdrawal Interest Percentage", 15);
 	cout << endl;
-	textflow("[2] To set Yearly Withdrawal Interest Percentage", 15);
+	textflow("\n\t\t\t 3. To set Course of Dollar to Uzbek Sums", 15);
 	cout << endl;
-	textflow("[3] To set Course of Dollar to Uzbek Sums", 15);
+	textflow("\n\t\t\t 0. To exit the Bank", 15);
 	cout << endl;
-	textflow("[0] To exit the Bank", 15);
-	cout << endl;
+	textflow("\n\n\t\t\t # Your option : ", 15);
+	
 }
 void cusent()
 {
-	textflow("Customer entered the system successfully", 20);
+	system("cls");
+	cout << ("\n        O N L I N E   B A N K                                       C U S T O M E R   M E N U       \n");
+	cout << "____________________________________________________________________________________________________\n\n";
+	textflow("\n\t\t  | | | | | Please choose one of the following options! | | | | |\n", 15);
 	cout << endl;
-	textflow("Please choose one of the following options", 15);
+	textflow("\n\t\t\t 1. Currency exchange", 15);
 	cout << endl;
-	textflow("[1] Currency exchange", 15);
+	textflow("\n\t\t\t 2. Making Savings", 15);
 	cout << endl;
-	textflow("[2] Making Savings", 15);
+	textflow("\n\t\t\t 3. Taking out a loan", 15);
 	cout << endl;
-	textflow("[3] Taking out a loan", 15);
+	textflow("\n\t\t\t 4. Apply for a credit card", 15);
 	cout << endl;
-	textflow("[4] Apply for a credit card", 15); 
+	textflow("\n\t\t\t 0. To Exit the bank", 15);
 	cout << endl;
-	textflow("[0] To Exit the bank", 15);
-	cout << endl;
+	textflow("\n\n\t\t\t # Your option : ", 15);
 }
 int main()/////////////////////////////////////////////////////////////////////////////////////////////////
 {
@@ -206,29 +233,41 @@ int main()//////////////////////////////////////////////////////////////////////
 	Courses objc;
 	bool switcher;
 	system("Color 0a");
-	cout << "\t\t\t\t\t";
-	textflow("Welcome to our system", 40);
-	cout << endl;
+
+	
+
+
+
 startingpoint:;
 	switcher = true;
 	while (signin != "n" && switcher)
 	{
-		textflow("Please enter your ID if you have, or:", 30);
+		cout << ("\n        O N L I N E   B A N K                                             R E G I S T R A T I O N       \n");
+		cout << "____________________________________________________________________________________________________\n\n";
+		textflow("\n\t\t   | Please enter your ID if you have, or get a new one: |\n", 30);
 		cout << endl;
-		textflow("[Y] To get ID", 20);
-		cout<< endl;
-		textflow("[N] To exit", 20);
+		
+		textflow("\n\t\t\t\t- Input [Y] to Get ID", 20);
 		cout << endl;
+		
+		textflow("\n\t\t\t\t- Input [N] to Exit\n", 20);
+		cout << endl;
+
+		textflow("\n\t\t   # Input ID or choose one of the options : ", 20);
+	
 		cin >> signin;
 		if (signin == "Y" || signin == "y" && switcher)
 		{
 			system("cls");
-			textflow("Please choose the type of ID", 30);
+			cout << ("\n        O N L I N E   B A N K                                             G E T T I N G   I D       \n");
+			cout << "____________________________________________________________________________________________________\n\n";
+			textflow("\n\n\t\t\t     | Please choose the type of ID |", 30);
 			cout << endl;
-			textflow("[1] To get Staff ID", 20);
+			textflow("\n\t\t\t\t  1. To get Staff ID", 20);
 			cout << endl;
-			textflow("[2] To get Customer ID", 20);
+			textflow("\n\t\t\t\t  2. To get Customer ID", 20);
 			cout << endl;
+			textflow("\n\n\t\t\t     # Your option (1/2) : ", 20);
 			int temp1;
 			cin >> temp1;
 			system("cls");
@@ -238,8 +277,11 @@ startingpoint:;
 			{
 			case1:
 				string staffid, staffpw, temp2;
-				textflow("Please enter 4 character ID", 20);
+				cout << ("\n        O N L I N E   B A N K                                             S T A F F   I D       \n");
+				cout << "____________________________________________________________________________________________________\n\n";
+				textflow("\n\n\t\t\t   | Please enter 4 character ID |", 20);
 				cout << endl;
+				textflow("\n\t\t\t\tID: ", 20);
 				cin >> staffid;
 				for (int i = 0; i < size(staffid); i++)
 				{
@@ -248,7 +290,7 @@ startingpoint:;
 						if (staffid[i] == chars[j])
 						{
 							system("Color 0C");
-							textflow("ID cannot contain symbols!", 20);
+							textflow("\n\t\t\t  * ID cannot contain symbols!", 20);
 							cout << endl;
 							Sleep(1200);
 							system("cls");
@@ -260,18 +302,18 @@ startingpoint:;
 				if (size(staffid) != 4)
 				{
 					system("Color 0C");
-					textflow("Staff ID should be 4 characters", 20);
+					textflow("\n\t\t\t   | Staff ID should be 4 characters |", 20);
 					cout << endl;
 					Sleep(1200);
 					system("cls");
 					system("Color 0A");
 					goto case1;
 				}
-				textflow("Please enter password", 20);
-				cout << endl;
+				textflow("\n\t\t\t   - Please enter a password : ", 20);
+				
 				cin >> staffpw;
-				textflow("Please confirm password", 20);
-				cout << endl;
+				textflow("\n\t\t\t   - Please confirm your password : ", 20);
+				
 				cin >> temp2;
 				if (staffpw == temp2)
 				{
@@ -280,15 +322,17 @@ startingpoint:;
 					inobj1.open("staffid.txt", ios::app, ios::binary);
 					inobj1.write((char*)&s, sizeof(s));
 					inobj1.close();
-					textflow("Staff Account Created Successfully", 20);
+					textflow("\n\t\t\t | Staff Account Created Successfully |", 20);
 					cout << endl;
 					Sleep(1200);
+					
+					system("cls");
 					goto startingpoint;
 				}
 				else
 				{
 					system("color 0c");
-					textflow("Passwords do not match", 20);
+					textflow("\n\t\t\t * Passwords do not match", 20);
 					cout << endl;
 					system("color 0a");
 					Sleep(1200);
@@ -301,8 +345,11 @@ startingpoint:;
 			{
 			case2:
 				string customerid, customerpw, temp8;
-				textflow("Please enter 6 character ID", 30);
-				cout << endl;
+				cout << ("\n        O N L I N E   B A N K                                             C U S T O M E R   I D       \n");
+				cout << "____________________________________________________________________________________________________\n\n";
+				textflow("\n\n\t\t\t   | Please enter 6 character ID |", 30);
+				textflow("\n\n\t\t\t\tID: ", 20);
+
 				cin >> customerid;
 				for (int i = 0; i < size(customerid); i++)
 				{
@@ -311,7 +358,8 @@ startingpoint:;
 						if (customerid[i] == chars[j])
 						{
 							system("Color 0C");
-							cout << "ID cannot contain symbols" << endl;
+							textflow("\n\t\t\t  * ID cannot contain symbols!", 20);
+							cout << endl;
 							system("Color 0a");
 							Sleep(1200);
 							system("cls");
@@ -322,17 +370,17 @@ startingpoint:;
 				if (size(customerid) != 6)
 				{
 					system("Color 0C");
-					cout << "Customer ID should be 6 characters" << endl;
+					textflow("\n\t\t\t * Customer ID should be 6 characters", 20);
 					system("Color 0a");
 					Sleep(1200);
 					system("cls");
 					goto case2;
 				}
-				textflow("Please enter password", 20); 
-				cout << endl;
+				textflow("\n\t\t\t   - Please enter a password : ", 20);
+			
 				cin >> customerpw;
-				textflow("Please confirm password", 20);
-				cout << endl;
+				textflow("\n\t\t\t   - Please confirm your password : ", 20);
+				
 				cin >> temp8;
 				if (customerpw == temp8)
 				{
@@ -340,7 +388,7 @@ startingpoint:;
 					inobj3.open("customerid.txt", ios::app, ios::binary);
 					inobj3.write((char*)&c, sizeof(c));
 					inobj3.close();
-					textflow("Customer Account Created Successfully", 30);
+					textflow("\n\t\t\t | Staff Account Created Successfully |", 20);
 					cout << endl;
 					Sleep(1200);
 					system("cls");
@@ -349,7 +397,7 @@ startingpoint:;
 				else
 				{
 					system("Color 0c");
-					textflow("Passwords do not match", 20);
+					textflow("\n\t\t\t * Passwords do not match", 20);
 					cout << endl;
 					system("Color 0a");
 					Sleep(1200);
@@ -364,6 +412,8 @@ startingpoint:;
 			}
 			}
 		}
+
+		//registration for staff id
 		else if (size(signin) == 4 && switcher)
 		{
 			inobj2.open("staffid.txt", ios::app, ios::binary);
@@ -376,12 +426,12 @@ startingpoint:;
 				if (s.getID() == signin && switcher)
 				{
 					temp6 = false;
-					textflow("Please enter your password", 20);
-					cout << endl;
+					textflow("\n\t\t   Please enter your password : ", 20);
 					string temp4;
 					cin >> temp4;
 					if (s.getPW() == temp4 && switcher)
 					{
+						STA://after tasks done staff come here
 						staffent();
 						int temp5;
 						cin >> temp5;
@@ -391,25 +441,43 @@ startingpoint:;
 							{
 							case 1:
 							{
+								system("cls");
+							cout << ("\n        O N L I N E   B A N K                                               D E P O S I T       \n");
+							cout << "____________________________________________________________________________________________________\n\n";
+
 								objc.setdep();
-								goto startingpoint;
+								goto STA;
 								break;
 							}
 							case 2:
 							{
+								system("cls");
+								cout << ("\n        O N L I N E   B A N K                                               W I T H D R A W A L       \n");
+								cout << "____________________________________________________________________________________________________\n\n";
+
 								objc.setwith();
-								goto startingpoint;
+								goto STA;
 								break;
 							}
 							case 3:
 							{
+								system("cls");
+								cout << ("\n        O N L I N E   B A N K                                       D O L L A R   C O U R S E       \n");
+								cout << "____________________________________________________________________________________________________\n\n";
+
 								objc.setdollarc();
-								goto startingpoint;
+								goto STA;
 								break;
+							}
+							case 0:
+							{
+								textflow("\n\t\t\tThank You for Using our Service!", 20);
+								Sleep(2000);
+								return 0;
 							}
 							default:
 							{
-								goto startingpoint;
+								goto STA;
 							}
 							}
 						}
@@ -418,6 +486,8 @@ startingpoint:;
 				}
 			}
 		}
+
+		//registration for customer id
 		else if (size(signin) == 6 && switcher)
 		{
 			inobj4.open("customerid.txt", ios::app, ios::binary);
@@ -428,43 +498,49 @@ startingpoint:;
 			{
 				if (signin == c.getID() && switcher)
 				{
-					textflow("Please enter your password", 20);
-					cout << endl;
+					textflow("\n\t\t   Please enter your password : ", 20);
 					string temp9;
 					cin >> temp9;
 					if (temp9 == c.getPW() && switcher)
 					{
+						CUS:
 						cusent();
 						int temp10;
 						cin >> temp10;
 						if (temp10 == 1)
 						{
+							system("cls");
+							cout << ("\n        O N L I N E   B A N K                                C U R R E N C Y   E X C H A N G E       \n");
+							cout << "____________________________________________________________________________________________________\n\n";
+
 							currencyexchange();
+							goto CUS;
 						}
 						else if (temp10 == 2)
 						{
 							Courses tmp1;
-							textflow("How much money you want to save?", 20);
-							cout << endl;
+							system("cls");
+							cout << ("\n        O N L I N E   B A N K                                               S A V I N G      \n");
+							cout << "____________________________________________________________________________________________________\n\n";
+
+							textflow("\n\t\t\tHow much money you want to save? : ", 20);
 							double savingm, totalmoney;
 							cin >> savingm;
 							while (savingm <= 0)
 							{
 								system("Color 0c");
-								textflow("You cannot save that money, enter again", 20);
+								textflow("\n\t\t\tYou cannot save that money, enter again", 20);
 								cout << endl;
 								system("Color 0A");
 								cin >> savingm;
 							}
-							textflow("After how many years you will take your money back?", 20);
-							cout << endl;
+							textflow("\n\t\t\tAfter how many years you will take your money back? : ", 20);
 							int years;
 							cin >> years;
 							while (years <= 0)
 							{
 								system("Color 0c");
-								textflow("Period must be at least 1 year", 20);
-								cout << endl;
+								textflow("\n\t\t\tPeriod must be at least 1 year : ", 20);
 								system("Color 0a");
 								cin >> years;
 							}
@@ -474,7 +550,7 @@ startingpoint:;
 							{
 								totalmoney += (savingm * temp12 / 100);
 							}
-							textflow("Money saved successfully, after ", 20);
+							textflow("\n\t\t\tMoney saved successfully, after ", 20);
 							cout << years;
 							textflow(" years, you will get ", 20);
 							cout << totalmoney << endl;
@@ -483,32 +559,34 @@ startingpoint:;
 							savemoney << signin << temp9 << totalmoney;
 							savemoney.close();
 							switcher = false;
-							goto startingpoint;
+							Sleep(2000);
+							goto CUS;
 							break;
 						}
 						else if (temp10 == 3)
 						{
 							Courses tmp2;
-							textflow("How much money you want to borrow?", 20);
-							cout << endl;
+							system("cls");
+							cout << ("\n        O N L I N E   B A N K                                                      L O A N       \n");
+							cout << "____________________________________________________________________________________________________\n\n";
+
+							textflow("\n\t\t\tHow much money you want to borrow? : ", 20);
 							double loanm, overallm;
 							cin >> loanm;
 							while (loanm <= 0)
 							{
 								system("Color 0c");
-								textflow("You cannot take that loan, enter again", 20);
-								cout << endl;
+								textflow("\n\t\t\tYou cannot take that loan, enter again : ", 20);
 								system("Color 0a");
 								cin >> loanm;
 							}
-							textflow("After how many years you want to return money?", 20);
-							cout << endl;
+							textflow("\n\t\t\tAfter how many years you want to return money? : ", 20);
 							int years1;
 							cin >> years1;
 							while (years1 <= 0)
 							{
 								system("Color 0c");
-								cout << "Period must be at least 1 year" << endl;
+								cout << "\n\t\t\tPeriod must be at least 1 year" << endl;
 								system("Color 0a");
 								cin >> years1;
 							}
@@ -518,7 +596,7 @@ startingpoint:;
 							{
 								overallm += (loanm * temp11 / 100);
 							}
-							textflow("You will have to return ", 20);
+							textflow("\n\t\t\tYou will have to return ", 20);
 							cout << overallm;
 							textflow(" after ", 20);
 							cout << years1;
@@ -529,46 +607,45 @@ startingpoint:;
 							saveloan << signin << temp9 << overallm;
 							saveloan.close();
 							switcher = false;
-							goto startingpoint;
+							Sleep(2000);
+							goto CUS;
 							break;
 						}
 						else if (temp10 == 4)
 						{
-						textflow("Enter Your Passport Serie Number", 20);
-						cout << endl;
+						 system("cls");
+						 cout << ("\n        O N L I N E   B A N K                                           C R E D I T   C A R D       \n");
+						 cout << "____________________________________________________________________________________________________\n\n";
+
+							textflow("\n\t\t\tEnter Your Passport Serie Number : ", 20);
 							string psn;
 							cin >> psn;
 							while (size(psn) != 9)
 							{
 								system("Color 0c");
-								textflow("Serie should be in format: AA0000000", 20);
-								cout << endl;
+								textflow("\n\t\t\tSerie should be in format: AA0000000 : ", 20);
 								system("Color 0A");
 								cin >> psn;
 							}
-							textflow("The serial number of your credit card: ", 20);
-							cout<< c.getID() << psn << endl;
+							textflow("\n\t\t\tThe serial number of your credit card : ", 20);
+							cout << c.getID() << psn << endl;
 							string ccpw = "no", temp12 = "NA";
 							while (temp12 != ccpw)
 							{
-								textflow("Make up a password for your Credit Card", 20);
-								cout << endl;
+								textflow("\n\t\t\tMake up a password for your Credit Card : ", 20);
 								cin >> temp12;
-								textflow("Confirm your password", 20);
-								cout << endl;
+								textflow("\n\t\t\tConfirm your password : ", 20);
 								cin >> ccpw;
 							}
-							textflow("Credit Card Obtaiend Successfully", 20);
+							textflow("\n\t\t\tCredit Card Obtaiend Successfully!", 20);
 							cout << endl;
 							double balance = 0, temp14;
-							textflow("If you want to add to your balance, type y", 20);
-							cout << endl;
+							textflow("\n\t\t\tIf you want to add to your balance, type y : ", 20);
 							string temp13;
 							cin >> temp13;
 							if (temp13 == "y" || temp13 == "Y")
 							{
-								textflow("How much you want to add to your balance?", 20);
-								cout << endl;
+								textflow("\n\t\t\tHow much you want to add to your balance? : ", 20);
 								cin >> temp14;
 								balance += temp14;
 							}
@@ -577,22 +654,45 @@ startingpoint:;
 							CCard << c.getID() << psn << ccpw << balance;
 							CCard.close();
 							switcher = false;
-							goto startingpoint;
+							Sleep(2000);
+							goto CUS;
 							break;
 						}
+						else if (temp10 == 0) 
+                        {
+						textflow("\n\t\t\tThank You for Using our Service!", 20);
+						Sleep(2000);
+						return 0;
+                        }
 						else
 						{
-							goto startingpoint;
+						system("Color 0c");
+						textflow("\n\t\t\t * Wrong Input! Try Again.", 20);
+						cout << endl;
+						system("Color 0a");
+						Sleep(1200);
+						goto CUS;
+						
 						}
-						goto startingpoint;
+					
 					}
 				}
 			}
 
 		}
+		else if(signin == "N" || signin == "n" && switcher)
+		{
+		 return 0;
+        }
 		else
 		{
-			goto startingpoint;
+		 system("Color 0c");
+		 textflow("\n\t\t\t * Wrong Input! Try Again.", 20);
+		 cout << endl;
+		 system("Color 0a");
+		 Sleep(1200);
+		 system("cls");
+		 goto startingpoint;
 		}
 	}
 	dollarf << objc.getdollarc();
@@ -601,5 +701,7 @@ startingpoint:;
 	dollarf.close();
 	depositper.close();
 	withdrawalper.close();
+
+	system("pause");
 	return 0;
 }
